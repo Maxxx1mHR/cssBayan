@@ -1,0 +1,21 @@
+@import 'libs/normalize.scss';
+@import 'base/accordion';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(254, 224, 224);
+}
+
+
+.wrapper {
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+

@@ -1,0 +1,144 @@
+// .accordion {
+
+// }
+
+// .accordion-item {
+//     // position: relative;
+//     // margin-bottom: 20px;
+
+// }
+
+// .accordion-item__input {
+//     appearance: none;
+//     position: absolute;
+//     // width: 0;
+//     // top: 0;
+//     // left: 0;
+
+//     // position: absolute;
+//     // z-index: -1;
+//     // opacity: 0;
+// }
+
+// .accordion-item__trigger {
+//     display: block;
+//     padding: 20px;
+//     border: 1px solid black;
+//     cursor: pointer;
+// }
+
+// .accordion-item__content {
+//     padding: 20px;
+//     border: 1px solid black;
+//     // border-top: none;
+//     display: none;
+//     cursor: pointer;
+//     &_img{
+//         width: 200px;
+//         height: 300px;
+//     }
+// }
+
+
+// .accordion-item__input:checked ~ .accordion-item__content {
+//     display: block;
+// }
+
+// .accordion-item:hover > .accordion-item__content {
+//     display: block;
+// }
+
+
+
+.accordion {
+    display: block;
+    cursor: pointer;
+    // margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    border-bottom: 5px solid pink;
+}
+
+.accordion__radio {
+    // display: block;
+    position: absolute;
+    opacity: 0;
+}
+.accordion__name {
+    padding: 20px;
+    font-size: 30px;
+    // border-top: 2px solid grey;
+    // margin-bottom: 5px;
+    // background-color: #ffffff;
+    // border-radius: 30px;
+
+    color: blue;
+}
+
+.accordion__content {
+    // width: 400px;
+    // margin: 0 auto;
+
+
+    display: none;
+
+    transition: all 2s;
+
+
+
+    // background-color: #ffffff;
+    // margin-bottom: 20px;
+    vertical-align: top;
+    &_img {
+        display: block;
+        margin: 0 auto;
+        width: 450px;
+        height: 500px;
+        // width: 100%;
+    }
+}
+
+
+.accordion__radio:checked ~ .accordion__content {
+    display: block;
+    // border-radius: 0 0 30px 30px;
+}
+
+.accordion:hover > .accordion__content {
+    display: block;
+    // border-radius: 0 0 30px 30px;
+}
+
+.wrapper:hover * {
+    color: black;
+}
+
+.accordion__radio:checked ~ .accordion__name {
+    // border-radius: 30px 30px 0 0;
+    color: black;
+    background-color: rgb(176, 176, 176);
+    border-radius: 30px 30px 0 0;
+
+}
+
+.accordion__radio:hover ~ .accordion__name {
+    // border-radius: 30px 30px 0 0;
+    color: black;
+    background-color: rgb(140, 94, 94);
+    border-radius: 30px 30px 0 0
+}
+
+
+
+// .accordion__radio:focus ~ .accordion__name {
+//     color: red;
+// }
+
+// .accordion__radio:not(:checked) ~ .accordion__name {
+//     color: red;
+// }
+
+
+
+
+

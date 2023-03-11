@@ -355,16 +355,6 @@ template {
   width: 100%;
   padding-left: 40px;
 }
-@media (min-width: 820px) {
-  .accordion__name {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1920px) {
-  .accordion__name {
-    font-size: 4rem;
-  }
-}
 
 .accordion__content {
   max-height: 0;
@@ -380,11 +370,6 @@ template {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-}
-@media (min-width: 820px) {
-  .accordion__content_img {
-    max-height: 25vh;
-  }
 }
 
 .accordion__wrapper {
@@ -407,29 +392,9 @@ template {
   max-height: 30vh;
 }
 
-.accordion:hover .accordion__content {
-  max-height: 30vh;
-  display: block;
-  -webkit-transition: max-height 1s ease-in-out;
-  transition: max-height 1s ease-in-out;
-}
-
-.wrapper:not(:hover) .accordion .accordion__radio:not(:checked) ~ .accordion__wrapper .accordion__name {
-  color: rgb(80, 94, 255);
-  -webkit-transition: color 0.5s ease-in-out;
-  transition: color 0.5s ease-in-out;
-}
-
 .accordion__radio:checked ~ .accordion__wrapper .arrow {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-}
-
-.accordion__radio:hover ~ .accordion__wrapper {
-  background-color: rgb(235, 183, 183);
-  border-radius: 3rem 3rem 0 0;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
 }
 
 .accordion__radio:checked ~ .accordion__wrapper {
@@ -438,7 +403,7 @@ template {
   border-radius: 3rem 3rem 0 0;
 }
 
-.accordion__radio:active ~ .accordion__wrapper {
+.accordion__radio:checked ~ .accordion__wrapper {
   color: rgb(80, 94, 255);
 }
 
@@ -447,8 +412,7 @@ template {
 }
 
 .accordion__radio:active ~ .accordion__content {
-  -webkit-filter: drop-shadow(0 0 1rem rgb(80, 94, 255));
-          filter: drop-shadow(0 0 1rem rgb(80, 94, 255));
+  opacity: 0.7;
   -webkit-transition: -webkit-filter 0.1s ease-in-out;
   transition: -webkit-filter 0.1s ease-in-out;
   transition: filter 0.1s ease-in-out;
@@ -456,21 +420,64 @@ template {
   cursor: url("../assets/icons/active-cursor.png"), auto;
 }
 
-.accordion__radio:hover ~ .accordion__wrapper > .arrow {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
 .accordion__radio:checked ~ .accordion__content .accordion__content_img {
   opacity: 1;
 }
 
-.accordion:hover > .accordion__content .accordion__content_img {
-  opacity: 1;
+@media (min-width: 820px) {
+  .wrapper {
+    max-width: 70%;
+  }
+  .header {
+    font-size: 4rem;
+  }
+  .accordion__name {
+    font-size: 3rem;
+  }
+  .accordion__content_img {
+    max-height: 25vh;
+  }
 }
-
+@media (min-width: 1920px) {
+  .wrapper {
+    max-width: 60%;
+  }
+  .header {
+    font-size: 5rem;
+  }
+  .accordion__name {
+    font-size: 4rem;
+  }
+  .accordion:hover .accordion__content {
+    max-height: 30vh;
+    display: block;
+    -webkit-transition: max-height 1s ease-in-out;
+    transition: max-height 1s ease-in-out;
+  }
+  .wrapper:not(:hover) .accordion .accordion__radio:not(:checked) ~ .accordion__wrapper .accordion__name {
+    color: rgb(80, 94, 255);
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+  }
+  .accordion__radio:not(:checked):hover ~ .accordion__wrapper {
+    background-color: rgb(235, 183, 183);
+    border-radius: 3rem 3rem 0 0;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .accordion__radio:active ~ .accordion__wrapper {
+    color: rgb(80, 94, 255);
+  }
+  .accordion__radio:hover ~ .accordion__wrapper > .arrow {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .accordion:hover > .accordion__content .accordion__content_img {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -488,30 +495,10 @@ body {
   max-width: 95%;
   margin: 0 auto;
 }
-@media (min-width: 820px) {
-  .wrapper {
-    max-width: 70%;
-  }
-}
-@media (min-width: 1920px) {
-  .wrapper {
-    max-width: 60%;
-  }
-}
 
 .header {
   text-align: center;
   font-size: 3rem;
   font-weight: 700;
   color: rgb(100, 50, 50);
-}
-@media (min-width: 820px) {
-  .header {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 1920px) {
-  .header {
-    font-size: 5rem;
-  }
 }/*# sourceMappingURL=style.css.map */

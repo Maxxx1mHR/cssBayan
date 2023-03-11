@@ -1,0 +1,57 @@
+@media (min-width: 820px) {
+    .wrapper {
+        max-width: 70%;
+    }
+    .header {
+        font-size: 4rem;
+    }
+
+    .accordion__name {
+        font-size: 3rem;
+    }
+    .accordion__content {
+        &_img {
+            max-height: 25vh;
+        }
+    }
+
+}
+
+@media (min-width: 1920px) {
+    .wrapper {
+        max-width: 60%;
+    }
+    .header {
+        font-size: 5rem;
+    }
+    .accordion__name {
+        font-size: 4rem;
+    }
+
+
+    //changed selectors
+    .accordion:hover .accordion__content {
+        max-height: 30vh;
+        display: block;
+        transition: max-height 1s ease-in-out;
+    }
+    .wrapper:not(:hover) .accordion .accordion__radio:not(:checked) ~ .accordion__wrapper .accordion__name {
+        color: $color-text-not-hover;
+        transition: color .5s ease-in-out;
+    }
+    .accordion__radio:not(:checked):hover ~ .accordion__wrapper {
+        background-color: $hover-background-color;
+        border-radius: 3rem 3rem 0 0;
+        transition: background-color .5s ease-in-out;
+    }
+    .accordion__radio:active ~ .accordion__wrapper {
+        color: $color-text-not-hover;
+    }
+    .accordion__radio:hover ~ .accordion__wrapper > .arrow {
+        transition: all 1s ease-in-out;
+        transform: rotate(-90deg);
+    }
+    .accordion:hover > .accordion__content .accordion__content_img{
+        opacity: 1;
+    }
+}

@@ -8,6 +8,9 @@
 
 
 @import 'blocks/accordion';
+@import 'blocks/media';
+
+
 
 
 * {
@@ -26,12 +29,12 @@ body {
     max-width: 95%;
     margin: 0 auto;
     // padding: 0 2rem 0 2rem;
-    @include media-tablet {
-        max-width: 70%;
-    }
-    @include media-desktop {
-        max-width: 60%;
-    }
+    // @include media-tablet {
+    //     max-width: 70%;
+    // }
+    // @include media-desktop {
+    //     max-width: 60%;
+    // }
 }
 
 .header {
@@ -39,12 +42,12 @@ body {
     font-size: 3rem;
     font-weight: 700;
     color: $main-color-text;
-    @include media-tablet {
-        font-size: 4rem;
-    }
-    @include media-desktop {
-        font-size: 5rem;
-    }
+    // @include media-tablet {
+    //     font-size: 4rem;
+    // }
+    // @include media-desktop {
+    //     font-size: 5rem;
+    // }
 }
 
 

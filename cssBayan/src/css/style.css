@@ -337,6 +337,18 @@ template {
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
+.wrapper {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(100, 50, 50);
+}
+
 .accordion {
   display: block;
   font-weight: 300;
@@ -489,16 +501,4 @@ template {
 
 body {
   background-color: rgb(249, 229, 229);
-}
-
-.wrapper {
-  max-width: 95%;
-  margin: 0 auto;
-}
-
-.header {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 700;
-  color: rgb(100, 50, 50);
 }/*# sourceMappingURL=style.css.map */

@@ -3,14 +3,9 @@
 
 @import 'base/arrows';
 @import 'base/variables';
-@import 'base/constants';
-@import 'base/mixins';
-
 
 @import 'blocks/accordion';
 @import 'blocks/media';
-
-
 
 
 * {
@@ -24,30 +19,3 @@
 body {
     background-color: $main-background-color;
 }
-
-.wrapper {
-    max-width: 95%;
-    margin: 0 auto;
-    // padding: 0 2rem 0 2rem;
-    // @include media-tablet {
-    //     max-width: 70%;
-    // }
-    // @include media-desktop {
-    //     max-width: 60%;
-    // }
-}
-
-.header {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: $main-color-text;
-    // @include media-tablet {
-    //     font-size: 4rem;
-    // }
-    // @include media-desktop {
-    //     font-size: 5rem;
-    // }
-}
-
-

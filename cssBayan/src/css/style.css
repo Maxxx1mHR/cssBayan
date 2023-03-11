@@ -346,10 +346,6 @@ template {
   cursor: url("../assets/icons/cursor.png"), auto;
 }
 
-.accordion:active {
-  cursor: url("../assets/icons/active-cursor.png"), auto;
-}
-
 .accordion__radio {
   display: none;
 }
@@ -411,20 +407,20 @@ template {
   max-height: 30vh;
 }
 
-.accordion:hover > .accordion__content {
+.accordion:hover .accordion__content {
   max-height: 30vh;
   display: block;
   -webkit-transition: max-height 1s ease-in-out;
   transition: max-height 1s ease-in-out;
 }
 
-.wrapper:not(:hover) > .accordion > .accordion__radio:not(:checked) ~ .accordion__wrapper {
+.wrapper:not(:hover) .accordion .accordion__radio:not(:checked) ~ .accordion__wrapper .accordion__name {
   color: rgb(80, 94, 255);
   -webkit-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
 }
 
-.accordion__radio:checked ~ .accordion__wrapper > .arrow {
+.accordion__radio:checked ~ .accordion__wrapper .arrow {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
@@ -444,6 +440,20 @@ template {
 
 .accordion__radio:active ~ .accordion__wrapper {
   color: rgb(80, 94, 255);
+}
+
+.accordion__radio:active ~ .accordion__wrapper {
+  cursor: url("../assets/icons/active-cursor.png"), auto;
+}
+
+.accordion__radio:active ~ .accordion__content {
+  -webkit-filter: drop-shadow(0 0 1rem rgb(80, 94, 255));
+          filter: drop-shadow(0 0 1rem rgb(80, 94, 255));
+  -webkit-transition: -webkit-filter 0.1s ease-in-out;
+  transition: -webkit-filter 0.1s ease-in-out;
+  transition: filter 0.1s ease-in-out;
+  transition: filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
+  cursor: url("../assets/icons/active-cursor.png"), auto;
 }
 
 .accordion__radio:hover ~ .accordion__wrapper > .arrow {

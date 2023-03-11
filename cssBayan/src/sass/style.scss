@@ -1,22 +1,46 @@
 @import 'libs/normalize.scss';
-@import 'blocks/accordion';
+
 @import 'base/arrows';
+@import 'base/variables';
+@import 'base/constants';
+@import 'base/mixins';
+
+@import 'blocks/accordion';
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 10px;
 }
 
 body {
-    background-color: rgb(254, 224, 224);
+    background-color: $main-background-color;
 }
 
-
 .wrapper {
-
-    max-width: 1000px;
+    max-width: 95%;
     margin: 0 auto;
+    // padding: 0 2rem 0 2rem;
+    @include media-tablet {
+        max-width: 70%;
+    }
+    @include media-desktop {
+        max-width: 60%;
+    }
+}
+
+.header {
+    text-align: center;
+    font-size: 3rem;
+    color: $main-color-text;
+    @include media-tablet {
+        font-size: 4rem;
+    }
+    @include media-desktop {
+        font-size: 5rem;
+    }
 }
 
 

@@ -7,7 +7,7 @@
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
-    color: $main-color-text;
+    color: rgb(100, 50, 50);
 }
 
 .accordion {
@@ -15,8 +15,8 @@
     font-weight: 300;
     background-color: #ffffff;
     border-radius: 3rem;
-    border-bottom: 0.5rem solid $main-color-text;
-    cursor: url('../assets/icons/cursor.png'), auto;
+    border-bottom: 0.5rem solid rgb(100, 50, 50);
+    cursor: url("../../assets/icons/cursor.png"), auto;
 }
 
 .accordion__radio {
@@ -33,14 +33,14 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 1s ease-in-out;
-    &_img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        max-height: 20vh;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
+}
+.accordion__content_img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 20vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .accordion__wrapper {
@@ -48,8 +48,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    color: $main-color-text;
-    transition: color .5s ease-in-out;
+    color: rgb(100, 50, 50);
+    transition: color 0.5s ease-in-out;
 }
 
 .accordion__radio:checked ~ .accordion__content {
@@ -61,25 +61,25 @@
 }
 
 .accordion__radio:checked ~ .accordion__wrapper {
-    color: $main-color-text;
-    background-color: $checked-background-color;
+    color: rgb(100, 50, 50);
+    background-color: rgb(255, 183, 58);
     border-radius: 3rem 3rem 0 0;
 }
 
 .accordion__radio:checked ~ .accordion__wrapper {
-    color: $color-text-not-hover;
+    color: rgb(80, 94, 255);
 }
 
 .accordion__radio:active ~ .accordion__wrapper {
-    cursor: url('../assets/icons/active-cursor.png'), auto;
+    cursor: url("../../assets/icons/active-cursor.png"), auto;
 }
 
 .accordion__radio:active ~ .accordion__content {
     opacity: 0.7;
     transition: filter 0.1s ease-in-out;
-    cursor: url('../assets/icons/active-cursor.png'), auto;
+    cursor: url("../../assets/icons/active-cursor.png"), auto;
 }
 
-.accordion__radio:checked ~ .accordion__content .accordion__content_img{
+.accordion__radio:checked ~ .accordion__content .accordion__content_img {
     opacity: 1;
 }

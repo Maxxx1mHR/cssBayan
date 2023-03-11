@@ -1,9 +1,8 @@
 .arrow {
-    background-image: url(../assets/icons/arrow-left-solid.svg);
+    background-image: url(../../assets/icons/arrow-left-solid.svg);
     width: 3rem;
     height: 3rem;
     display: inline-block;
     background-repeat: no-repeat;
     transition: transform 1s ease-in-out;
 }
-

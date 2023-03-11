@@ -1,9 +1,11 @@
 @import 'libs/normalize.scss';
+@import 'libs/fonts';
 
 @import 'base/arrows';
 @import 'base/variables';
 @import 'base/constants';
 @import 'base/mixins';
+
 
 @import 'blocks/accordion';
 
@@ -12,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gotham Pro', sans-serif;
     font-size: 10px;
 }
 
@@ -34,6 +37,7 @@ body {
 .header {
     text-align: center;
     font-size: 3rem;
+    font-weight: 700;
     color: $main-color-text;
     @include media-tablet {
         font-size: 4rem;

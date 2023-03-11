@@ -311,6 +311,20 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../assets/fonts/GothamPro/GothamPro-Light.eot");
+  src: local("../assets/fonts/GothamPro/Gotham Pro Light"), local("GothamPro-Light"), url("../assets/fonts/GothamPro/GothamPro-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/GothamPro/GothamPro-Light.woff") format("woff"), url("../assets/fonts/GothamPro/GothamPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../assets/fonts/GothamPro/GothamPro-Bold.eot");
+  src: local("../assets/fonts/GothamPro/Gotham Pro Bold"), local("GothamPro-Bold"), url("../assets/fonts/GothamPro/GothamPro-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/GothamPro/GothamPro-Bold.woff") format("woff"), url("../assets/fonts/GothamPro/GothamPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 .arrow {
   background-image: url(../assets/icons/arrow-left-solid.svg);
   width: 3rem;
@@ -325,10 +339,15 @@ template {
 
 .accordion {
   display: block;
-  cursor: pointer;
+  font-weight: 300;
   background-color: #ffffff;
   border-radius: 3rem;
   border-bottom: 0.5rem solid rgb(100, 50, 50);
+  cursor: url("../assets/icons/cursor.png"), auto;
+}
+
+.accordion:active {
+  cursor: url("../assets/icons/active-cursor.png"), auto;
 }
 
 .accordion__radio {
@@ -338,6 +357,7 @@ template {
 .accordion__name {
   font-size: 2rem;
   width: 100%;
+  padding-left: 40px;
 }
 @media (min-width: 820px) {
   .accordion__name {
@@ -422,6 +442,10 @@ template {
   border-radius: 3rem 3rem 0 0;
 }
 
+.accordion__radio:active ~ .accordion__wrapper {
+  color: rgb(80, 94, 255);
+}
+
 .accordion__radio:hover ~ .accordion__wrapper > .arrow {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
@@ -442,6 +466,7 @@ template {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 10px;
 }
 
@@ -467,6 +492,7 @@ body {
 .header {
   text-align: center;
   font-size: 3rem;
+  font-weight: 700;
   color: rgb(100, 50, 50);
 }
 @media (min-width: 820px) {

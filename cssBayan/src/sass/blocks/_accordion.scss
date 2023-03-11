@@ -1,9 +1,14 @@
 .accordion {
     display: block;
-    cursor: pointer;
+    font-weight: 300;
     background-color: #ffffff;
     border-radius: 3rem;
     border-bottom: 0.5rem solid $main-color-text;
+    cursor: url('../assets/icons/cursor.png'), auto;
+}
+
+.accordion:active {
+    cursor: url('../assets/icons/active-cursor.png'), auto;
 }
 
 .accordion__radio {
@@ -13,6 +18,7 @@
 .accordion__name {
     font-size: 2rem;
     width: 100%;
+    padding-left: 40px;
     @include media-tablet {
         font-size: 3rem;
     }
@@ -78,6 +84,11 @@
     background-color: $checked-background-color;
     border-radius: 3rem 3rem 0 0;
 }
+
+.accordion__radio:active ~ .accordion__wrapper {
+    color: $color-text-not-hover;
+}
+
 
 .accordion__radio:hover ~ .accordion__wrapper > .arrow {
     transition: all 1s ease-in-out;

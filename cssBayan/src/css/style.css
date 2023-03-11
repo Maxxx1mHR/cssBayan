@@ -320,51 +320,100 @@ template {
 }
 
 .accordion__radio {
-  position: absolute;
-  opacity: 0;
+  display: none;
 }
 
 .accordion__name {
-  padding: 20px;
   font-size: 30px;
-  color: blue;
 }
 
 .accordion__content {
-  display: none;
-  -webkit-transition: all 2s;
-  transition: all 2s;
-  vertical-align: top;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .accordion__content_img {
   display: block;
   margin: 0 auto;
   width: 450px;
   height: 500px;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.accordion__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  color: rgb(140, 94, 94);
 }
 
 .accordion__radio:checked ~ .accordion__content {
-  display: block;
+  max-height: 100vh;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .accordion:hover > .accordion__content {
+  max-height: 40vh;
   display: block;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .wrapper:hover * {
   color: black;
 }
 
-.accordion__radio:checked ~ .accordion__name {
+.accordion__radio:checked ~ .accordion__wrapper {
   color: black;
   background-color: rgb(176, 176, 176);
   border-radius: 30px 30px 0 0;
 }
 
-.accordion__radio:hover ~ .accordion__name {
+.accordion__radio:checked ~ .accordion__wrapper > .arrow {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.accordion__radio:hover ~ .accordion__wrapper {
   color: black;
   background-color: rgb(140, 94, 94);
   border-radius: 30px 30px 0 0;
+}
+
+.accordion__radio:hover ~ .accordion__wrapper > .arrow {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.accordion__radio:checked ~ .accordion__content .accordion__content_img {
+  opacity: 1;
+}
+
+.accordion:hover > .accordion__content .accordion__content_img {
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.arrow {
+  background-image: url(../assets/icons/arrow-left-solid.svg);
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-repeat: no-repeat;
 }
 
 * {

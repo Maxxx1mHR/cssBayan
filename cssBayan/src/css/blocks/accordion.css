@@ -37,7 +37,7 @@
 .accordion__content_img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 80%;
     max-height: 20vh;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -47,9 +47,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem;
+    padding: 0.5rem;
     color: rgb(100, 50, 50);
     transition: color 0.5s ease-in-out;
+
 }
 
 .accordion__radio:checked ~ .accordion__content {
@@ -58,6 +59,7 @@
 
 .accordion__radio:checked ~ .accordion__wrapper .arrow {
     transform: rotate(-90deg);
+    transition: transform 1s ease-in-out;
 }
 
 .accordion__radio:checked ~ .accordion__wrapper {
@@ -66,11 +68,12 @@
     border-radius: 2rem 2rem 0 0;
 }
 
-.accordion__radio:checked ~ .accordion__wrapper {
+/* .accordion__radio:checked ~ .accordion__wrapper {
     color: rgb(80, 94, 255);
-}
+} */
 
 .accordion__radio:active ~ .accordion__wrapper {
+    color: rgb(80, 94, 255);
     cursor: url("../../assets/icons/active-cursor.png"), auto;
 }
 
@@ -83,3 +86,4 @@
 .accordion__radio:checked ~ .accordion__content .accordion__content_img {
     opacity: 1;
 }
+

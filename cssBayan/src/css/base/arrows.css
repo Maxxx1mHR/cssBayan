@@ -1,8 +1,12 @@
 .arrow {
-    background-image: url(../../assets/icons/arrow-left-solid.svg);
-    width: 3rem;
-    height: 3rem;
+    /* background-image: url(../../assets/icons/arrow-left-solid.svg); */
+    width: 2rem;
+    height: 2rem;
     display: inline-block;
     background-repeat: no-repeat;
-    transition: transform 1s ease-in-out;
+    /* transition: transform 1s ease-in-out; */
+    fill: rgb(100, 50, 50);
+}
+.accordion__radio:active ~ .accordion__wrapper .arrow {
+    fill: rgb(80, 94, 255);
 }

@@ -5,7 +5,7 @@
 
 .header {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     color: rgb(100, 50, 50);
 }
@@ -14,17 +14,18 @@
     display: block;
     font-weight: 300;
     background-color: #ffffff;
-    border-radius: 3rem;
-    border-bottom: 0.5rem solid rgb(100, 50, 50);
+    border-radius: 2rem;
+    border-bottom: 0.3rem solid rgb(100, 50, 50);
     cursor: url("../../assets/icons/cursor.png"), auto;
 }
 
 .accordion__radio {
-    display: none;
+    display: block;
+    height: 0;
 }
 
 .accordion__name {
-    font-size: 2rem;
+    font-size: 1.2rem;
     width: 100%;
 }
 
@@ -46,7 +47,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1.2rem;
     color: rgb(100, 50, 50);
     transition: color 0.5s ease-in-out;
 }
@@ -62,7 +63,7 @@
 .accordion__radio:checked ~ .accordion__wrapper {
     color: rgb(100, 50, 50);
     background-color: rgb(255, 183, 58);
-    border-radius: 3rem 3rem 0 0;
+    border-radius: 2rem 2rem 0 0;
 }
 
 .accordion__radio:checked ~ .accordion__wrapper {

@@ -3,10 +3,10 @@
         max-width: 70%;
     }
     .header {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .accordion__name {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .accordion__content_img {
         max-height: 25vh;
@@ -17,11 +17,13 @@
         max-width: 60%;
     }
     .header {
-        font-size: 5rem;
-    }
-    .accordion__name {
         font-size: 4rem;
     }
+    .accordion__name {
+        font-size: 3rem;
+    }
+}
+@media (hover: hover) {
     .accordion:hover .accordion__content {
         max-height: 30vh;
         display: block;
@@ -33,7 +35,7 @@
     }
     .accordion__radio:not(:checked):hover ~ .accordion__wrapper {
         background-color: rgb(235, 183, 183);
-        border-radius: 3rem 3rem 0 0;
+        border-radius: 2rem 2rem 0 0;
         transition: background-color 0.5s ease-in-out;
     }
     .accordion__radio:active ~ .accordion__wrapper {
